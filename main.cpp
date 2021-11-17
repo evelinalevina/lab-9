@@ -34,32 +34,26 @@ int main()
 
         shape1_x++;
         if (shape1_x > 600)
-            shape1_x = 600;
-       
+            shape1_x = 600;       
         shape1.setPosition(shape1_x, shape1_y);
-        shape2_x++;
+
+        shape2_x+=5;
         if (shape2_x > 700)
-            shape2_x = 700;
-        
+            shape2_x = 700;        
         shape2.setPosition(shape2_x, shape2_y);
-        shape3_x++;
+
+        shape3_x+=2;
         if (shape3_x > 560)
-            shape3_x = 560;
-        
+            shape3_x = 560;        
         shape3.setPosition(shape3_x, shape3_y);
-
-        // Очистить окно от всего
-        window.clear();
-
-        // Перемещение фигуры в буфер
+      
+        window.clear();       
         window.draw(shape1);
         window.draw(shape2);
         window.draw(shape3);
-
-        // Отобразить на окне все, что есть в буфере
         window.display();
 
-        std::this_thread::sleep_for(1ms);
+        std::this_thread::sleep_for(40ms);
     }
 
     return 0;
